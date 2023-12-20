@@ -1,0 +1,1488 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Trade+Winds&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Trade+Winds&display=swap");
+:root {
+  --verdeSpoti:#1DB954;
+  --negroSpoti:#000000;
+  --blancoSpoti:#ffffff;
+  --grisSpoti:rgb(155, 155, 155);
+  --fuenteSpoti: "Circular Std Book", system, -apple-system, BlinkMacSystemFont, sans-serif;
+  --fuente2: "Montserrat";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.menu-artist {
+  width: calc(100% - 6em);
+  height: auto;
+  margin-left: 6em;
+  padding: 4em;
+}
+.menu-artist > h1 {
+  font-family: var(--fuenteSpoti);
+  color: white;
+  font-display: swap;
+}
+.menu-artist .top-artist-view {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: safe;
+  padding-top: 3em;
+}
+.menu-artist .top-artist-view #artist-img-name {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2.3em;
+  gap: 1em;
+}
+.menu-artist .top-artist-view #artist-img-name > img {
+  width: 180px;
+  height: 180px;
+  border-radius: 100%;
+}
+.menu-artist .top-artist-view #artist-img-name > a {
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  text-align: center;
+  font-family: var(--fuenteSpoti);
+  font-weight: 400;
+  font-size: 15px;
+  color: white;
+}
+.menu-artist .top-artist-view #artist-img-name > a:hover {
+  border-bottom: 1px solid white;
+}
+
+.menu-played {
+  width: calc(100% - 6em);
+  height: auto;
+  margin-left: 6em;
+  padding: 0 4em;
+}
+.menu-played #titulo-played {
+  width: 100%;
+  padding: 4em 0;
+}
+.menu-played #titulo-played > h1 {
+  font-family: var(--fuenteSpoti);
+  color: white;
+  font-display: swap;
+}
+.menu-played .top-played-view {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+}
+.menu-played .top-played-view #played-vw {
+  width: 50%;
+  height: 100vh;
+}
+.menu-played .top-played-view #played-vw #ply-trac {
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  border-radius: 5px;
+  gap: 1em;
+  cursor: pointer;
+}
+.menu-played .top-played-view #played-vw #ply-trac > img {
+  width: 42px;
+  height: 42px;
+}
+.menu-played .top-played-view #played-vw #ply-trac #ply-info {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--fuenteSpoti);
+}
+.menu-played .top-played-view #played-vw #ply-trac #ply-info #ply-song {
+  color: white;
+}
+.menu-played .top-played-view #played-vw #ply-trac #ply-info #ply-artist {
+  font-size: 14px;
+  color: var(--grisSpoti);
+}
+.menu-played .top-played-view #played-vw #ply-trac:hover {
+  background-color: #2d2d2d;
+}
+.menu-played .top-played-view #album-vw {
+  position: fixed;
+  right: 0;
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  margin: 0 5em;
+}
+.menu-played .top-played-view #album-vw #vw-imagen {
+  position: relative;
+  width: 25em;
+  height: 25em;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+.menu-played .top-played-view #album-vw #vw-imagen #alb-trc {
+  position: absolute;
+  width: auto;
+  height: 25em;
+  object-fit: cover;
+  transition: opacity 0.1s linear;
+}
+.menu-played .top-played-view #album-vw #vw-imagen > a {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+.menu-played .top-played-view #album-vw #vw-imagen > a #alb-inf {
+  margin: auto;
+  width: 42px;
+  height: 42px;
+  opacity: 0;
+}
+.menu-played .top-played-view #album-vw #vw-imagen:hover #alb-trc {
+  opacity: 0.4;
+}
+.menu-played .top-played-view #album-vw #vw-imagen:hover > a {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+.menu-played .top-played-view #album-vw #vw-imagen:hover > a #alb-inf {
+  position: absolute;
+  align-self: center;
+  width: 42px;
+  height: 42px;
+  opacity: 1;
+}
+
+/*ESTILOS DE artists_data.HTML*/
+.menu-data-artist {
+  width: 100%;
+}
+.menu-data-artist .title-name {
+  margin-left: 5.5em;
+  width: calc(100% - 27.3em);
+  height: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: var(--fuenteSpoti);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.menu-data-artist .title-name > h2 {
+  width: 100%;
+  height: 50%;
+  padding: 1em 2em;
+  background-color: rgba(0, 0, 0, 0.514);
+  font-size: 2em;
+}
+.menu-data-artist .title-name #name-artist {
+  width: 100%;
+  height: 100%;
+  font-family: var(--fuenteSpoti);
+  font-size: 45px;
+  font-weight: 600;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.menu-data-artist .bubble-art {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  -webkit-box-shadow: -9px 0px 5px 0px rgba(0, 0, 0, 0.427);
+  -moz-box-shadow: -9px 0px 5px 0px rgba(0, 0, 0, 0.427);
+  box-shadow: -9px 0px 5px 0px rgba(0, 0, 0, 0.427);
+  overflow: hidden;
+}
+.menu-data-artist .bubble-art > img {
+  display: none;
+  min-width: 350px;
+  height: 350px;
+  object-fit: cover;
+}
+.menu-data-artist .container-data-artist {
+  margin-left: 5.5em;
+  width: calc(100% - 5.5em);
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.menu-data-artist .container-data-artist .column-artist {
+  width: calc(100% - 350px);
+  height: auto;
+  padding-top: 3em;
+  padding-bottom: 3em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.menu-data-artist .container-data-artist .column-artist .row-data1, .menu-data-artist .container-data-artist .column-artist .row-data2 {
+  width: 100%;
+  height: 7em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.menu-data-artist .container-data-artist .column-artist .row-data1 #item1, .menu-data-artist .container-data-artist .column-artist .row-data2 #item1 {
+  width: 20em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+}
+.menu-data-artist .container-data-artist .column-artist .row-data1 #item1 > h3, .menu-data-artist .container-data-artist .column-artist .row-data2 #item1 > h3 {
+  text-align: center;
+  font-family: var(--fuenteSpoti);
+  font-size: 28px;
+  color: var(--verdeSpoti);
+}
+.menu-data-artist .container-data-artist .column-artist .row-data1 #item1 > span, .menu-data-artist .container-data-artist .column-artist .row-data2 #item1 > span {
+  font-family: var(--fuente2);
+  color: var(--grisSpoti);
+}
+.menu-data-artist .container-data-artist .column-artist .row-data1 #item2, .menu-data-artist .container-data-artist .column-artist .row-data2 #item2 {
+  width: 20em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+}
+.menu-data-artist .container-data-artist .column-artist .row-data1 #item2 > h2, .menu-data-artist .container-data-artist .column-artist .row-data2 #item2 > h2 {
+  font-family: var(--fuenteSpoti);
+  font-size: 30px;
+  color: white;
+}
+.menu-data-artist .container-data-artist .column-artist .row-data1 #item2 #rated, .menu-data-artist .container-data-artist .column-artist .row-data2 #item2 #rated {
+  font-size: 20px;
+  color: yellow;
+  text-shadow: 2px 1px 1px rgb(90, 59, 0);
+}
+.menu-data-artist .container-data-artist .column-artist .row-data3 {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+.menu-data-artist .container-data-artist .column-artist .row-data3 .disc-filtro {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.menu-data-artist .container-data-artist .column-artist .row-data3 .disc-filtro > h2 {
+  display: block;
+  width: 100%;
+  font-family: var(--fuenteSpoti);
+  color: var(--blancoSpoti);
+  margin: 2em;
+}
+.menu-data-artist .container-data-artist .column-artist .row-data3 .disc-filtro > select {
+  min-width: 7em;
+  height: 2em;
+  margin: 3em;
+  cursor: pointer;
+  outline: none;
+  color: white;
+  font-size: 14px;
+  border: none;
+  background-color: transparent;
+  font-family: var(--fuente2);
+}
+.menu-data-artist .container-data-artist .column-artist .row-data3 .disc-filtro > select > option {
+  color: white;
+  background-color: #181818;
+  outline: none;
+  border: none;
+}
+.menu-data-artist .container-data-artist .column-artist .row-data3 #discografia {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: safe;
+  padding-left: 2em;
+  gap: 0.5em;
+}
+.menu-data-artist .container-data-artist .column-artist .row-data3 #discografia .album {
+  width: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 2em;
+  gap: 1em;
+}
+.menu-data-artist .container-data-artist .column-artist .row-data3 #discografia .album > img {
+  width: 150px;
+  height: 150px;
+  box-shadow: rgba(70, 64, 68, 0.4) 5px 5px, rgba(70, 64, 68, 0.3) 10px 10px;
+}
+.menu-data-artist .container-data-artist .column-artist .row-data3 #discografia .album > a {
+  text-decoration: none;
+  text-align: center;
+  text-wrap: wrap;
+  font-family: var(--fuente2);
+  font-size: 14px;
+  color: var(--blancoSpoti);
+}
+.menu-data-artist .container-data-artist .column-artist .row-data3 #discografia .album > a:hover {
+  text-decoration: solid;
+}
+.menu-data-artist .container-data-artist .column-top {
+  width: 350px;
+  height: auto;
+  background-color: rgba(0, 0, 0, 0.3960784314);
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  padding-top: 230px;
+}
+.menu-data-artist .container-data-artist .column-top > h4 {
+  font-family: var(--fuente2);
+  color: var(--blancoSpoti);
+  margin-bottom: 1em;
+}
+.menu-data-artist .container-data-artist .column-top .next-top {
+  width: 100%;
+  height: 3.5em;
+  padding: 0em 1.5em;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 1em;
+  transition: 0.2s ease-in;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.174);
+  overflow: hidden;
+}
+.menu-data-artist .container-data-artist .column-top .next-top > img {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+}
+.menu-data-artist .container-data-artist .column-top .next-top > a {
+  width: 100%;
+  height: 100%;
+  font-family: var(--fuenteSpoti);
+  font-size: small;
+  color: var(--blancoSpoti);
+  text-decoration: none;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.menu-data-artist .container-data-artist .column-top .next-top:hover {
+  background-color: #202020;
+}
+
+/*ESTILOS DE albums.html*/
+.menu-album {
+  width: 100%;
+}
+.menu-album .header-album {
+  margin-left: 5.5em;
+  width: calc(100% - 5.5em);
+  height: 20em;
+}
+.menu-album .header-album .fondo-contenedor {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(360deg, rgba(0, 0, 0, 0.715), transparent);
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  padding: 0 4em;
+}
+.menu-album .header-album .fondo-contenedor .album-contenedor {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+}
+.menu-album .header-album .fondo-contenedor .album-contenedor .album-item {
+  width: 15em;
+  display: grid;
+  place-content: center;
+}
+.menu-album .header-album .fondo-contenedor .album-contenedor .album-item > img {
+  width: 15em;
+  height: 15em;
+  box-shadow: rgba(0, 0, 0, 0.4) 5px 5px, rgba(0, 0, 0, 0.3) 10px 10px;
+  object-fit: cover;
+}
+.menu-album .header-album .fondo-contenedor .album-contenedor .album-item-info {
+  width: auto;
+  padding: 1em 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: start;
+  gap: 0.5em;
+}
+.menu-album .header-album .fondo-contenedor .album-contenedor .album-item-info > span {
+  font-family: var(--fuenteSpoti);
+  color: white;
+}
+.menu-album .header-album .fondo-contenedor .album-contenedor .album-item-info #album-name {
+  font-family: var(--fuenteSpoti);
+  color: white;
+}
+.menu-album .header-album .fondo-contenedor .album-contenedor .album-item-info #album-art-tracks {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 0.5em;
+}
+.menu-album .header-album .fondo-contenedor .album-contenedor .album-item-info #album-art-tracks > img {
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+}
+.menu-album .header-album .fondo-contenedor .album-contenedor .album-item-info #album-art-tracks > span {
+  font-family: var(--fuenteSpoti);
+  color: white;
+}
+.menu-album .header-album .fondo-contenedor > a {
+  min-width: 10em;
+  padding: 0.5em;
+  text-decoration: none;
+  font-family: var(--fuenteSpoti);
+  font-size: 14px;
+  color: var(--negroSpoti);
+  background-color: white;
+  text-align: center;
+  border-radius: 10em;
+  transition: 0.2s linear;
+}
+.menu-album .header-album .fondo-contenedor > a:hover {
+  box-shadow: 0px 4px 0px var(--verdeSpoti);
+}
+.menu-album .album-tracks {
+  margin-left: 5.5em;
+  width: calc(100% - 5.5em);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.menu-album .album-tracks .tracks-header {
+  width: 90%;
+  padding: 2em 0 0.5em 0;
+  border-bottom: 1px solid var(--grisSpoti);
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--fuenteSpoti);
+  color: var(--grisSpoti);
+}
+.menu-album .album-tracks .tracks-header #cuanta-titulo {
+  display: flex;
+  gap: 1em;
+}
+.menu-album .album-tracks .tracks-header > i {
+  padding-right: 1em;
+}
+.menu-album .album-tracks .track {
+  width: 90%;
+  padding: 1em 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: 0.1s linear;
+}
+.menu-album .album-tracks .track .track-pt1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 1em;
+  font-family: var(--fuenteSpoti);
+  color: var(--blancoSpoti);
+}
+.menu-album .album-tracks .track .track-pt1 > span {
+  width: 1em;
+  padding: 0.5px;
+  text-align: center;
+}
+.menu-album .album-tracks .track .track-pt1 .canc-artista > span {
+  font-size: 15px;
+  color: var(--grisSpoti);
+}
+.menu-album .album-tracks .track .track-pt2 {
+  font-family: var(--fuenteSpoti);
+  color: var(--blancoSpoti);
+  padding-right: 1em;
+}
+.menu-album .album-tracks .track:hover {
+  background-color: #202020;
+}
+
+/*ESTILOS DE recently.html*/
+.menu-recent {
+  width: 100%;
+}
+.menu-recent .header-recent {
+  margin-left: 5.5em;
+  width: calc(100% - 5.5em);
+  height: 15em;
+  background-color: var(--verdeSpoti);
+}
+.menu-recent .header-recent .fondo-contenedor {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(360deg, rgba(0, 0, 0, 0.603), transparent);
+  display: grid;
+  place-content: center;
+  padding: 2em;
+}
+.menu-recent .header-recent .fondo-contenedor .recent-contenedor {
+  width: 100%;
+  height: 100%;
+  font-family: var(--fuenteSpoti);
+  font-size: 3em;
+  color: var(--blancoSpoti);
+  text-align: center;
+  text-wrap: balance;
+}
+.menu-recent .recent-tracks {
+  margin-left: 5.5em;
+  width: calc(100% - 5.5em);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5em;
+}
+.menu-recent .recent-tracks .tracks-header {
+  width: 90%;
+  padding: 2em 0 0.5em 0;
+  border-bottom: 1px solid var(--grisSpoti);
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--fuenteSpoti);
+  color: var(--grisSpoti);
+}
+.menu-recent .recent-tracks .tracks-header #cuanta-titulo {
+  display: flex;
+  gap: 1em;
+}
+.menu-recent .recent-tracks .tracks-header #cuanta-titulo #cuenta {
+  padding-left: 5px;
+}
+.menu-recent .recent-tracks .tracks-header #cuanta-titulo #titulo {
+  margin-left: 1em;
+}
+.menu-recent .recent-tracks .tracks-header > i {
+  padding-right: 1em;
+}
+.menu-recent .recent-tracks .track {
+  width: 90%;
+  padding: 1em 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: 0.1s linear;
+}
+.menu-recent .recent-tracks .track .track-pt1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 1em;
+  font-family: var(--fuenteSpoti);
+  color: var(--blancoSpoti);
+}
+.menu-recent .recent-tracks .track .track-pt1 > span {
+  width: 1em;
+  height: auto;
+  padding: 0 0.5em;
+}
+.menu-recent .recent-tracks .track .track-pt1 > img {
+  width: 40px;
+  height: 40px;
+  margin-left: 1em;
+}
+.menu-recent .recent-tracks .track .track-pt1 .canc-artista > span {
+  font-size: 15px;
+  color: var(--grisSpoti);
+}
+.menu-recent .recent-tracks .track .track-ptm {
+  width: auto;
+  font-family: var(--fuenteSpoti);
+  font-size: 14px;
+  color: var(--grisSpoti);
+  padding-right: 1em;
+  text-align: center;
+}
+.menu-recent .recent-tracks .track .track-pt2 {
+  font-family: var(--fuenteSpoti);
+  color: var(--blancoSpoti);
+  padding-right: 1em;
+}
+.menu-recent .recent-tracks .track:hover {
+  background-color: #202020;
+}
+
+/*ESTILOS DE chronoHits.html*/
+.menu-chrono {
+  width: 100%;
+}
+.menu-chrono .header-chrono {
+  position: relative;
+  margin-left: 5.5em;
+  width: calc(100% - 5.5em);
+  height: 15em;
+}
+.menu-chrono .header-chrono .shaper {
+  background: gray url(../assets/images/pattern.jpg) repeat 0 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  display: grid;
+  place-content: center;
+  box-sizing: border-box;
+  -webkit-animation: slide 30s linear infinite;
+}
+.menu-chrono .header-chrono .shaper h1 {
+  font-family: "Trade Winds";
+  font-size: 80px;
+  color: white;
+  text-shadow: 2px 5px 10px var(--verdeSpoti), 6px 9px 14px blue;
+}
+@-webkit-keyframes slide {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -512px -512px;
+  }
+}
+.menu-chrono .chrono-section {
+  margin-left: 5.5em;
+  width: calc(100% - 5.5em);
+  height: 100vh;
+  padding: 4em 2em;
+}
+.menu-chrono .chrono-section .contenedor-chrono {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: "art art art hit hit hit";
+  gap: 1em;
+}
+.menu-chrono .chrono-section .contenedor-chrono .tit-art {
+  grid-area: art;
+}
+.menu-chrono .chrono-section .contenedor-chrono .tit-hit {
+  grid-area: hit;
+  position: static;
+}
+.menu-chrono .chrono-section .contenedor-chrono .tit-art, .menu-chrono .chrono-section .contenedor-chrono .tit-hit {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.menu-chrono .chrono-section .contenedor-chrono .tit-art > h2, .menu-chrono .chrono-section .contenedor-chrono .tit-hit > h2 {
+  text-align: center;
+  font-family: var(--fuenteSpoti);
+  margin-bottom: 1em;
+  color: white;
+}
+.menu-chrono .chrono-section .contenedor-chrono .tit-art > h2 > i, .menu-chrono .chrono-section .contenedor-chrono .tit-hit > h2 > i {
+  visibility: hidden;
+}
+.menu-chrono .chrono-section .contenedor-chrono .tit-art .art-chrono, .menu-chrono .chrono-section .contenedor-chrono .tit-art .tracks-ano, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .art-chrono, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .tracks-ano {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 8em);
+  color: white;
+  padding: 0 1em;
+  overflow-y: scroll;
+}
+.menu-chrono .chrono-section .contenedor-chrono .tit-art .art-chrono .top-art, .menu-chrono .chrono-section .contenedor-chrono .tit-art .art-chrono .bst-hit, .menu-chrono .chrono-section .contenedor-chrono .tit-art .tracks-ano .top-art, .menu-chrono .chrono-section .contenedor-chrono .tit-art .tracks-ano .bst-hit, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .art-chrono .top-art, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .art-chrono .bst-hit, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .tracks-ano .top-art, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .tracks-ano .bst-hit {
+  text-decoration: none;
+  color: white;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  padding: 5px 10px;
+  border-radius: 3px;
+  gap: 1em;
+  cursor: pointer;
+}
+.menu-chrono .chrono-section .contenedor-chrono .tit-art .art-chrono .top-art #tk, .menu-chrono .chrono-section .contenedor-chrono .tit-art .art-chrono .bst-hit #tk, .menu-chrono .chrono-section .contenedor-chrono .tit-art .tracks-ano .top-art #tk, .menu-chrono .chrono-section .contenedor-chrono .tit-art .tracks-ano .bst-hit #tk, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .art-chrono .top-art #tk, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .art-chrono .bst-hit #tk, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .tracks-ano .top-art #tk, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .tracks-ano .bst-hit #tk {
+  position: absolute;
+  right: 10px;
+  font-family: "Trade Winds";
+  font-size: 1.5em;
+  letter-spacing: 2px;
+  color: #fff;
+  text-shadow: 0 0 7px gold, 0 0 10px yellow, 0 0 21px yellow, 0 0 42px yellow;
+}
+.menu-chrono .chrono-section .contenedor-chrono .tit-art .art-chrono .top-art .img-art, .menu-chrono .chrono-section .contenedor-chrono .tit-art .art-chrono .top-art .img-hit, .menu-chrono .chrono-section .contenedor-chrono .tit-art .art-chrono .bst-hit .img-art, .menu-chrono .chrono-section .contenedor-chrono .tit-art .art-chrono .bst-hit .img-hit, .menu-chrono .chrono-section .contenedor-chrono .tit-art .tracks-ano .top-art .img-art, .menu-chrono .chrono-section .contenedor-chrono .tit-art .tracks-ano .top-art .img-hit, .menu-chrono .chrono-section .contenedor-chrono .tit-art .tracks-ano .bst-hit .img-art, .menu-chrono .chrono-section .contenedor-chrono .tit-art .tracks-ano .bst-hit .img-hit, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .art-chrono .top-art .img-art, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .art-chrono .top-art .img-hit, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .art-chrono .bst-hit .img-art, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .art-chrono .bst-hit .img-hit, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .tracks-ano .top-art .img-art, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .tracks-ano .top-art .img-hit, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .tracks-ano .bst-hit .img-art, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .tracks-ano .bst-hit .img-hit {
+  width: 42px;
+  height: 42px;
+}
+.menu-chrono .chrono-section .contenedor-chrono .tit-art .art-chrono .top-art .img-art > img, .menu-chrono .chrono-section .contenedor-chrono .tit-art .art-chrono .top-art .img-hit > img, .menu-chrono .chrono-section .contenedor-chrono .tit-art .art-chrono .bst-hit .img-art > img, .menu-chrono .chrono-section .contenedor-chrono .tit-art .art-chrono .bst-hit .img-hit > img, .menu-chrono .chrono-section .contenedor-chrono .tit-art .tracks-ano .top-art .img-art > img, .menu-chrono .chrono-section .contenedor-chrono .tit-art .tracks-ano .top-art .img-hit > img, .menu-chrono .chrono-section .contenedor-chrono .tit-art .tracks-ano .bst-hit .img-art > img, .menu-chrono .chrono-section .contenedor-chrono .tit-art .tracks-ano .bst-hit .img-hit > img, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .art-chrono .top-art .img-art > img, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .art-chrono .top-art .img-hit > img, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .art-chrono .bst-hit .img-art > img, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .art-chrono .bst-hit .img-hit > img, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .tracks-ano .top-art .img-art > img, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .tracks-ano .top-art .img-hit > img, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .tracks-ano .bst-hit .img-art > img, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .tracks-ano .bst-hit .img-hit > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.menu-chrono .chrono-section .contenedor-chrono .tit-art .art-chrono .top-art > span, .menu-chrono .chrono-section .contenedor-chrono .tit-art .art-chrono .bst-hit > span, .menu-chrono .chrono-section .contenedor-chrono .tit-art .tracks-ano .top-art > span, .menu-chrono .chrono-section .contenedor-chrono .tit-art .tracks-ano .bst-hit > span, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .art-chrono .top-art > span, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .art-chrono .bst-hit > span, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .tracks-ano .top-art > span, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .tracks-ano .bst-hit > span {
+  font-family: var(--fuenteSpoti);
+  font-size: 14px;
+}
+.menu-chrono .chrono-section .contenedor-chrono .tit-art .art-chrono .bst-hit, .menu-chrono .chrono-section .contenedor-chrono .tit-art .tracks-ano .bst-hit, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .art-chrono .bst-hit, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .tracks-ano .bst-hit {
+  position: relative;
+}
+.menu-chrono .chrono-section .contenedor-chrono .tit-art .art-chrono .bst-hit.active0, .menu-chrono .chrono-section .contenedor-chrono .tit-art .tracks-ano .bst-hit.active0, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .art-chrono .bst-hit.active0, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .tracks-ano .bst-hit.active0 {
+  box-shadow: 0px -2px 12px #FFD700;
+  transition: 0.2s ease;
+}
+.menu-chrono .chrono-section .contenedor-chrono .tit-art .art-chrono .bst-hit.active1, .menu-chrono .chrono-section .contenedor-chrono .tit-art .tracks-ano .bst-hit.active1, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .art-chrono .bst-hit.active1, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .tracks-ano .bst-hit.active1 {
+  box-shadow: 0px 0px 12px rgba(255, 183, 15, 0.7058823529);
+  transition: 0.2s ease;
+}
+.menu-chrono .chrono-section .contenedor-chrono .tit-art .art-chrono .bst-hit.active2, .menu-chrono .chrono-section .contenedor-chrono .tit-art .tracks-ano .bst-hit.active2, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .art-chrono .bst-hit.active2, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .tracks-ano .bst-hit.active2 {
+  box-shadow: 0px 2px 12px rgba(255, 166, 0, 0.337254902);
+  transition: 0.2s ease;
+}
+.menu-chrono .chrono-section .contenedor-chrono .tit-art .art-chrono .top-art:hover, .menu-chrono .chrono-section .contenedor-chrono .tit-art .tracks-ano .top-art:hover, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .art-chrono .top-art:hover, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .tracks-ano .top-art:hover {
+  background-color: #2d2d2d;
+}
+.menu-chrono .chrono-section .contenedor-chrono .tit-art .art-chrono .bst-hit:hover, .menu-chrono .chrono-section .contenedor-chrono .tit-art .tracks-ano .bst-hit:hover, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .art-chrono .bst-hit:hover, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .tracks-ano .bst-hit:hover {
+  background-color: #2d2d2d;
+}
+.menu-chrono .chrono-section .contenedor-chrono .tit-art .art-chrono .animate__animated.animate__fadeIn, .menu-chrono .chrono-section .contenedor-chrono .tit-art .tracks-ano .animate__animated.animate__fadeIn, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .art-chrono .animate__animated.animate__fadeIn, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .tracks-ano .animate__animated.animate__fadeIn {
+  animation-duration: 0.4s;
+}
+.menu-chrono .chrono-section .contenedor-chrono .tit-art .art-chrono::-webkit-scrollbar, .menu-chrono .chrono-section .contenedor-chrono .tit-art .tracks-ano::-webkit-scrollbar, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .art-chrono::-webkit-scrollbar, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .tracks-ano::-webkit-scrollbar {
+  width: 10px;
+  background-color: #2d2d2d;
+  border-radius: 1em;
+}
+.menu-chrono .chrono-section .contenedor-chrono .tit-art .art-chrono::-webkit-scrollbar-thumb, .menu-chrono .chrono-section .contenedor-chrono .tit-art .tracks-ano::-webkit-scrollbar-thumb, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .art-chrono::-webkit-scrollbar-thumb, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .tracks-ano::-webkit-scrollbar-thumb {
+  background-color: #056166;
+  border-radius: 1em;
+}
+
+/********************************/
+@media screen and (max-width: 767px) {
+  .menu-artist {
+    width: 100%;
+    margin-left: 0;
+    padding: 2em;
+  }
+  .menu-artist > h1 {
+    font-size: 2.25em;
+  }
+  .menu-artist .top-artist-view {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 3em;
+  }
+  .menu-artist .top-artist-view #artist-img-name {
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2.3em;
+    gap: 1em;
+  }
+  .menu-artist .top-artist-view #artist-img-name > img {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    object-fit: cover;
+  }
+  .menu-artist .top-artist-view #artist-img-name > span {
+    text-align: center;
+    font-family: var(--fuenteSpoti);
+    font-size: 1em;
+    color: white;
+  }
+  .menu-data-artist {
+    width: 100%;
+  }
+  .menu-data-artist .title-name {
+    margin-left: 0;
+    width: 100%;
+    height: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: var(--fuenteSpoti);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+  }
+  .menu-data-artist .title-name > h2 {
+    width: 100%;
+    height: 50%;
+    padding: auto;
+    background-color: rgba(0, 0, 0, 0.514);
+    font-size: 1.5em;
+  }
+  .menu-data-artist .title-name #name-artist {
+    width: 100%;
+    height: 100%;
+    font-size: 2.25em;
+    padding: 0.5em 1.5em;
+    text-shadow: 1px 3px 10px black;
+  }
+  .menu-data-artist .bubble-art {
+    display: none;
+  }
+  .menu-data-artist .container-data-artist {
+    margin-left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .menu-data-artist .container-data-artist .column-artist {
+    width: 100%;
+    padding-top: 3em;
+    padding-bottom: 3em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+  .menu-data-artist .container-data-artist .column-artist .row-data1, .menu-data-artist .container-data-artist .column-artist .row-data2 {
+    width: 100%;
+    height: 7em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .menu-data-artist .container-data-artist .column-artist .row-data1 #item1, .menu-data-artist .container-data-artist .column-artist .row-data2 #item1 {
+    width: 20em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+  }
+  .menu-data-artist .container-data-artist .column-artist .row-data1 #item1 > h3, .menu-data-artist .container-data-artist .column-artist .row-data2 #item1 > h3 {
+    text-align: center;
+    font-family: var(--fuenteSpoti);
+    font-size: 1.5em;
+    color: var(--verdeSpoti);
+  }
+  .menu-data-artist .container-data-artist .column-artist .row-data1 #item1 > span, .menu-data-artist .container-data-artist .column-artist .row-data2 #item1 > span {
+    font-family: var(--fuente2);
+    color: var(--grisSpoti);
+  }
+  .menu-data-artist .container-data-artist .column-artist .row-data1 #item2, .menu-data-artist .container-data-artist .column-artist .row-data2 #item2 {
+    width: 20em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+  }
+  .menu-data-artist .container-data-artist .column-artist .row-data1 #item2 > h2, .menu-data-artist .container-data-artist .column-artist .row-data2 #item2 > h2 {
+    font-family: var(--fuenteSpoti);
+    font-size: 1.5em;
+    color: white;
+  }
+  .menu-data-artist .container-data-artist .column-artist .row-data1 #item2 #rated, .menu-data-artist .container-data-artist .column-artist .row-data2 #item2 #rated {
+    font-size: 1.2em;
+  }
+  .menu-data-artist .container-data-artist .column-artist .row-data3 .disc-filtro {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    /* Mostrar el contenido cuando el botón se hoverea */
+  }
+  .menu-data-artist .container-data-artist .column-artist .row-data3 .disc-filtro > h2 {
+    display: block;
+    width: auto;
+    font-family: var(--fuenteSpoti);
+    font-size: 1.5em;
+    color: var(--blancoSpoti);
+    margin: 2em;
+  }
+  .menu-data-artist .container-data-artist .column-artist .row-data3 .disc-filtro .filtro {
+    width: 10em;
+  }
+  .menu-data-artist .container-data-artist .column-artist .row-data3 .disc-filtro .filtro .filtro-btn > i {
+    float: right;
+  }
+  .menu-data-artist .container-data-artist .column-artist .row-data3 .disc-filtro .filtro:hover .filtro-contenido {
+    display: block;
+  }
+  .menu-data-artist .container-data-artist .column-artist .row-data3 #discografia {
+    padding-left: 0em;
+    justify-content: center;
+  }
+  .menu-data-artist .container-data-artist .column-artist .row-data3 #discografia .album > img {
+    width: 150px;
+    height: 150px;
+    box-shadow: rgba(70, 64, 68, 0.4) 5px 5px, rgba(70, 64, 68, 0.3) 10px 10px;
+  }
+  .menu-data-artist .container-data-artist .column-top {
+    padding-top: 4em;
+    width: 100%;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.3215686275);
+  }
+  .menu-data-artist .container-data-artist .column-top > h4 {
+    margin-bottom: 2em;
+  }
+  .menu-album {
+    width: 100%;
+  }
+  .menu-album .header-album {
+    margin-left: 0;
+    width: 100%;
+    height: 20em;
+  }
+  .menu-album .header-album .fondo-contenedor {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(360deg, rgba(0, 0, 0, 0.715), transparent);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+  .menu-album .header-album .fondo-contenedor .album-contenedor {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .menu-album .header-album .fondo-contenedor .album-contenedor .album-item {
+    width: -moz-fit-content;
+    width: fit-content;
+    display: grid;
+    place-content: center;
+    padding-left: 2em;
+  }
+  .menu-album .header-album .fondo-contenedor .album-contenedor .album-item > img {
+    width: 8em;
+    height: 8em;
+    box-shadow: rgba(0, 0, 0, 0.4) 5px 5px, rgba(0, 0, 0, 0.3) 10px 10px;
+    object-fit: cover;
+  }
+  .menu-album .header-album .fondo-contenedor .album-contenedor .album-item-info {
+    width: auto;
+    padding: 1em 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: start;
+    gap: 0.5em;
+  }
+  .menu-album .header-album .fondo-contenedor .album-contenedor .album-item-info > span {
+    font-family: var(--fuenteSpoti);
+    color: white;
+  }
+  .menu-album .header-album .fondo-contenedor .album-contenedor .album-item-info #album-name {
+    font-family: var(--fuenteSpoti);
+    color: white;
+    font-size: 1.5em;
+  }
+  .menu-album .header-album .fondo-contenedor .album-contenedor .album-item-info #album-art-tracks {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 0.5em;
+  }
+  .menu-album .header-album .fondo-contenedor .album-contenedor .album-item-info #album-art-tracks > img {
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+  }
+  .menu-album .header-album .fondo-contenedor .album-contenedor .album-item-info #album-art-tracks > span {
+    font-family: var(--fuenteSpoti);
+    color: white;
+  }
+  .menu-album .header-album .fondo-contenedor > a {
+    position: absolute;
+    top: 2em;
+    right: 2em;
+    min-width: 10em;
+    padding: 0.5em;
+    text-decoration: none;
+    font-family: var(--fuenteSpoti);
+    font-size: 14px;
+    color: var(--negroSpoti);
+    background-color: white;
+    text-align: center;
+    border-radius: 10em;
+    transition: 0.2s linear;
+  }
+  .menu-album .header-album .fondo-contenedor > a:hover {
+    box-shadow: 0px 4px 0px var(--verdeSpoti);
+  }
+  .menu-album .album-tracks {
+    margin-left: 0;
+    margin-bottom: 5em;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .menu-album .album-tracks .tracks-header {
+    width: 90%;
+    padding: 2em 0 0.5em 0;
+    border-bottom: 1px solid var(--grisSpoti);
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--fuenteSpoti);
+    color: var(--grisSpoti);
+  }
+  .menu-album .album-tracks .tracks-header #cuanta-titulo {
+    display: flex;
+    gap: 1em;
+  }
+  .menu-album .album-tracks .tracks-header > i {
+    padding-right: 1em;
+  }
+  .menu-album .album-tracks .track {
+    width: 90%;
+    padding: 1em 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .menu-album .album-tracks .track .track-pt1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 1em;
+    font-family: var(--fuenteSpoti);
+    color: var(--blancoSpoti);
+  }
+  .menu-album .album-tracks .track .track-pt1 > span {
+    width: 1em;
+    padding: 0.5px;
+    text-align: center;
+  }
+  .menu-album .album-tracks .track .track-pt1 .canc-artista > span {
+    font-size: 15px;
+    color: var(--grisSpoti);
+  }
+  .menu-album .album-tracks .track .track-pt2 {
+    font-family: var(--fuenteSpoti);
+    color: var(--blancoSpoti);
+    padding-right: 1em;
+  }
+  .menu-played {
+    width: 100%;
+    height: auto;
+    margin-left: 0;
+    padding: 0 2em;
+  }
+  .menu-played #titulo-played {
+    width: 100%;
+    padding: 4em 0;
+  }
+  .menu-played #titulo-played > h1 {
+    font-family: var(--fuenteSpoti);
+    color: white;
+    font-display: swap;
+  }
+  .menu-played .top-played-view {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+  }
+  .menu-played .top-played-view #played-vw {
+    width: 100%;
+    height: 100vh;
+  }
+  .menu-played .top-played-view #played-vw #ply-trac {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    border-radius: 5px;
+    gap: 1em;
+    cursor: pointer;
+  }
+  .menu-played .top-played-view #played-vw #ply-trac > img {
+    width: 42px;
+    height: 42px;
+  }
+  .menu-played .top-played-view #played-vw #ply-trac #ply-info {
+    display: flex;
+    flex-direction: column;
+    font-family: var(--fuenteSpoti);
+  }
+  .menu-played .top-played-view #played-vw #ply-trac #ply-info #ply-song {
+    font-size: 13px;
+    color: white;
+  }
+  .menu-played .top-played-view #played-vw #ply-trac #ply-info #ply-artist {
+    font-size: 12px;
+    color: var(--grisSpoti);
+  }
+  .menu-played .top-played-view #played-vw #ply-trac:hover {
+    background-color: #2d2d2d;
+  }
+  .menu-played .top-played-view #album-vw {
+    position: fixed;
+    bottom: 5em;
+    right: 0;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin: 0 2em;
+  }
+  .menu-played .top-played-view #album-vw #vw-imagen {
+    position: relative;
+    width: 5em;
+    height: 5em;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+  }
+  .menu-played .top-played-view #album-vw #vw-imagen #alb-trc {
+    position: absolute;
+    width: auto;
+    height: 5em;
+    object-fit: cover;
+    transition: opacity 0.1s linear;
+  }
+  .menu-played .top-played-view #album-vw #vw-imagen > a {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+  }
+  .menu-played .top-played-view #album-vw #vw-imagen > a #alb-inf {
+    margin: auto;
+    width: 42px;
+    height: 42px;
+    opacity: 0;
+  }
+  .menu-played .top-played-view #album-vw #vw-imagen:hover #alb-trc {
+    opacity: 0.4;
+  }
+  .menu-played .top-played-view #album-vw #vw-imagen:hover > a {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+  }
+  .menu-played .top-played-view #album-vw #vw-imagen:hover > a #alb-inf {
+    position: absolute;
+    align-self: center;
+    width: 42px;
+    height: 42px;
+    opacity: 1;
+  }
+  .menu-recent {
+    width: 100%;
+  }
+  .menu-recent .header-recent {
+    margin-left: 0em;
+    width: 100%;
+    height: 15em;
+    background-color: var(--verdeSpoti);
+  }
+  .menu-recent .header-recent .fondo-contenedor {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(360deg, rgba(0, 0, 0, 0.603), transparent);
+    display: grid;
+    place-content: center;
+    padding: 2em;
+  }
+  .menu-recent .header-recent .fondo-contenedor .recent-contenedor {
+    width: 100%;
+    height: 100%;
+    font-family: var(--fuenteSpoti);
+    font-size: 2em;
+    color: var(--blancoSpoti);
+    text-align: center;
+    text-wrap: balance;
+  }
+  .menu-recent .recent-tracks {
+    margin-left: 0em;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5em;
+  }
+  .menu-recent .recent-tracks .tracks-header {
+    width: 90%;
+    padding: 2em 0 0.5em 0;
+    border-bottom: 1px solid var(--grisSpoti);
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--fuenteSpoti);
+    color: var(--grisSpoti);
+  }
+  .menu-recent .recent-tracks .tracks-header #cuanta-titulo {
+    display: flex;
+    gap: 1em;
+  }
+  .menu-recent .recent-tracks .tracks-header #cuanta-titulo #cuenta {
+    padding-left: 5px;
+  }
+  .menu-recent .recent-tracks .tracks-header #cuanta-titulo #titulo {
+    margin-left: 1em;
+  }
+  .menu-recent .recent-tracks .tracks-header > i {
+    padding-right: 1em;
+  }
+  .menu-recent .recent-tracks .track {
+    width: 90%;
+    padding: 1em 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.1s linear;
+  }
+  .menu-recent .recent-tracks .track .track-pt1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 1em;
+    font-family: var(--fuenteSpoti);
+    color: var(--blancoSpoti);
+  }
+  .menu-recent .recent-tracks .track .track-pt1 > span {
+    width: 1em;
+    height: auto;
+    padding: 0 0.5em;
+  }
+  .menu-recent .recent-tracks .track .track-pt1 > img {
+    width: 40px;
+    height: 40px;
+    margin-left: 1em;
+  }
+  .menu-recent .recent-tracks .track .track-pt1 .canc-artista > span {
+    font-size: 0.8em;
+    color: var(--grisSpoti);
+  }
+  .menu-recent .recent-tracks .track .track-ptm {
+    display: none;
+    width: auto;
+    font-family: var(--fuenteSpoti);
+    font-size: 14px;
+    color: var(--grisSpoti);
+    padding-right: 1em;
+    text-align: center;
+  }
+  .menu-recent .recent-tracks .track .track-pt2 {
+    font-family: var(--fuenteSpoti);
+    color: var(--blancoSpoti);
+    padding-right: 1em;
+  }
+  .menu-recent .recent-tracks .track:hover {
+    background-color: #202020;
+  }
+  .menu-chrono {
+    width: 100%;
+  }
+  .menu-chrono .header-chrono {
+    position: relative;
+    margin-left: 0em;
+    width: 100%;
+    height: 10em;
+  }
+  .menu-chrono .header-chrono .shaper h1 {
+    font-size: 45px;
+  }
+  .menu-chrono .chrono-section {
+    margin-left: 0;
+    width: 100%;
+    height: 100vh;
+    padding: 4em 0em;
+  }
+  .menu-chrono .chrono-section .contenedor-chrono {
+    width: 100%;
+    height: auto;
+    display: flex;
+  }
+  .menu-chrono .chrono-section .contenedor-chrono .tit-art {
+    display: flex;
+    margin-bottom: 5em;
+    grid-area: art;
+    opacity: 1;
+  }
+  .menu-chrono .chrono-section .contenedor-chrono .tit-hit {
+    display: none;
+    top: 0;
+    grid-area: hit;
+    background-color: rgba(24, 24, 24, 0.8784313725);
+    opacity: 1;
+    padding-top: 2em;
+    border-radius: 10px;
+    padding-bottom: 5em;
+  }
+  .menu-chrono .chrono-section .contenedor-chrono .tit-art, .menu-chrono .chrono-section .contenedor-chrono .tit-hit {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .menu-chrono .chrono-section .contenedor-chrono .tit-art > h2, .menu-chrono .chrono-section .contenedor-chrono .tit-hit > h2 {
+    text-align: center;
+    font-family: var(--fuenteSpoti);
+    margin-bottom: 1em;
+    color: white;
+  }
+  .menu-chrono .chrono-section .contenedor-chrono .tit-art > h2 > i, .menu-chrono .chrono-section .contenedor-chrono .tit-hit > h2 > i {
+    visibility: visible;
+    position: absolute;
+    right: 1em;
+    cursor: pointer;
+  }
+  .menu-chrono .chrono-section .contenedor-chrono .tit-art .art-chrono, .menu-chrono .chrono-section .contenedor-chrono .tit-art .tracks-ano, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .art-chrono, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .tracks-ano {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 8em);
+    color: white;
+    padding: 0 1em;
+    overflow-y: scroll;
+  }
+  .menu-chrono .chrono-section .contenedor-chrono .tit-art .art-chrono .top-art, .menu-chrono .chrono-section .contenedor-chrono .tit-art .art-chrono .bst-hit, .menu-chrono .chrono-section .contenedor-chrono .tit-art .tracks-ano .top-art, .menu-chrono .chrono-section .contenedor-chrono .tit-art .tracks-ano .bst-hit, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .art-chrono .top-art, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .art-chrono .bst-hit, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .tracks-ano .top-art, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .tracks-ano .bst-hit {
+    text-decoration: none;
+    color: white;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    padding: 5px 10px;
+    border-radius: 3px;
+    background-color: #181818;
+    gap: 1em;
+    cursor: pointer;
+  }
+  .menu-chrono .chrono-section .contenedor-chrono .tit-art .art-chrono .top-art #tk, .menu-chrono .chrono-section .contenedor-chrono .tit-art .art-chrono .bst-hit #tk, .menu-chrono .chrono-section .contenedor-chrono .tit-art .tracks-ano .top-art #tk, .menu-chrono .chrono-section .contenedor-chrono .tit-art .tracks-ano .bst-hit #tk, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .art-chrono .top-art #tk, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .art-chrono .bst-hit #tk, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .tracks-ano .top-art #tk, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .tracks-ano .bst-hit #tk {
+    position: absolute;
+    right: 10px;
+    font-family: "Trade Winds";
+    font-size: 1.5em;
+    letter-spacing: 2px;
+    color: #fff;
+    text-shadow: 0 0 7px gold, 0 0 10px yellow, 0 0 21px yellow, 0 0 42px yellow;
+  }
+  .menu-chrono .chrono-section .contenedor-chrono .tit-art .art-chrono .top-art .img-art, .menu-chrono .chrono-section .contenedor-chrono .tit-art .art-chrono .top-art .img-hit, .menu-chrono .chrono-section .contenedor-chrono .tit-art .art-chrono .bst-hit .img-art, .menu-chrono .chrono-section .contenedor-chrono .tit-art .art-chrono .bst-hit .img-hit, .menu-chrono .chrono-section .contenedor-chrono .tit-art .tracks-ano .top-art .img-art, .menu-chrono .chrono-section .contenedor-chrono .tit-art .tracks-ano .top-art .img-hit, .menu-chrono .chrono-section .contenedor-chrono .tit-art .tracks-ano .bst-hit .img-art, .menu-chrono .chrono-section .contenedor-chrono .tit-art .tracks-ano .bst-hit .img-hit, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .art-chrono .top-art .img-art, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .art-chrono .top-art .img-hit, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .art-chrono .bst-hit .img-art, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .art-chrono .bst-hit .img-hit, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .tracks-ano .top-art .img-art, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .tracks-ano .top-art .img-hit, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .tracks-ano .bst-hit .img-art, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .tracks-ano .bst-hit .img-hit {
+    width: 42px;
+    height: 42px;
+  }
+  .menu-chrono .chrono-section .contenedor-chrono .tit-art .art-chrono .top-art .img-art > img, .menu-chrono .chrono-section .contenedor-chrono .tit-art .art-chrono .top-art .img-hit > img, .menu-chrono .chrono-section .contenedor-chrono .tit-art .art-chrono .bst-hit .img-art > img, .menu-chrono .chrono-section .contenedor-chrono .tit-art .art-chrono .bst-hit .img-hit > img, .menu-chrono .chrono-section .contenedor-chrono .tit-art .tracks-ano .top-art .img-art > img, .menu-chrono .chrono-section .contenedor-chrono .tit-art .tracks-ano .top-art .img-hit > img, .menu-chrono .chrono-section .contenedor-chrono .tit-art .tracks-ano .bst-hit .img-art > img, .menu-chrono .chrono-section .contenedor-chrono .tit-art .tracks-ano .bst-hit .img-hit > img, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .art-chrono .top-art .img-art > img, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .art-chrono .top-art .img-hit > img, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .art-chrono .bst-hit .img-art > img, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .art-chrono .bst-hit .img-hit > img, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .tracks-ano .top-art .img-art > img, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .tracks-ano .top-art .img-hit > img, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .tracks-ano .bst-hit .img-art > img, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .tracks-ano .bst-hit .img-hit > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .menu-chrono .chrono-section .contenedor-chrono .tit-art .art-chrono .top-art > span, .menu-chrono .chrono-section .contenedor-chrono .tit-art .art-chrono .bst-hit > span, .menu-chrono .chrono-section .contenedor-chrono .tit-art .tracks-ano .top-art > span, .menu-chrono .chrono-section .contenedor-chrono .tit-art .tracks-ano .bst-hit > span, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .art-chrono .top-art > span, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .art-chrono .bst-hit > span, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .tracks-ano .top-art > span, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .tracks-ano .bst-hit > span {
+    font-family: var(--fuenteSpoti);
+    font-size: 14px;
+  }
+  .menu-chrono .chrono-section .contenedor-chrono .tit-art .art-chrono .bst-hit, .menu-chrono .chrono-section .contenedor-chrono .tit-art .tracks-ano .bst-hit, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .art-chrono .bst-hit, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .tracks-ano .bst-hit {
+    position: relative;
+    border-bottom: 1px solid gray;
+  }
+  .menu-chrono .chrono-section .contenedor-chrono .tit-art .art-chrono .bst-hit.active0, .menu-chrono .chrono-section .contenedor-chrono .tit-art .tracks-ano .bst-hit.active0, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .art-chrono .bst-hit.active0, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .tracks-ano .bst-hit.active0 {
+    box-shadow: 0px 2px 12px #FFD700;
+    transition: 0.2s ease;
+  }
+  .menu-chrono .chrono-section .contenedor-chrono .tit-art .art-chrono .bst-hit.active1, .menu-chrono .chrono-section .contenedor-chrono .tit-art .tracks-ano .bst-hit.active1, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .art-chrono .bst-hit.active1, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .tracks-ano .bst-hit.active1 {
+    box-shadow: 0px 2px 12px rgba(255, 183, 15, 0.7058823529);
+    transition: 0.2s ease;
+  }
+  .menu-chrono .chrono-section .contenedor-chrono .tit-art .art-chrono .bst-hit.active2, .menu-chrono .chrono-section .contenedor-chrono .tit-art .tracks-ano .bst-hit.active2, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .art-chrono .bst-hit.active2, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .tracks-ano .bst-hit.active2 {
+    box-shadow: 0px 2px 12px rgba(255, 166, 0, 0.337254902);
+    transition: 0.2s ease;
+  }
+  .menu-chrono .chrono-section .contenedor-chrono .tit-art .art-chrono .top-art:hover, .menu-chrono .chrono-section .contenedor-chrono .tit-art .tracks-ano .top-art:hover, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .art-chrono .top-art:hover, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .tracks-ano .top-art:hover {
+    background-color: #2d2d2d;
+  }
+  .menu-chrono .chrono-section .contenedor-chrono .tit-art .art-chrono .bst-hit:hover, .menu-chrono .chrono-section .contenedor-chrono .tit-art .tracks-ano .bst-hit:hover, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .art-chrono .bst-hit:hover, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .tracks-ano .bst-hit:hover {
+    background-color: #2d2d2d;
+  }
+  .menu-chrono .chrono-section .contenedor-chrono .tit-art .art-chrono .animate__animated.animate__fadeIn, .menu-chrono .chrono-section .contenedor-chrono .tit-art .tracks-ano .animate__animated.animate__fadeIn, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .art-chrono .animate__animated.animate__fadeIn, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .tracks-ano .animate__animated.animate__fadeIn {
+    animation-duration: 0.4s;
+  }
+  .menu-chrono .chrono-section .contenedor-chrono .tit-art .tracks-ano, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .tracks-ano {
+    padding-top: 1em;
+  }
+  .menu-chrono .chrono-section .contenedor-chrono .tit-art .art-chrono::-webkit-scrollbar, .menu-chrono .chrono-section .contenedor-chrono .tit-art .tracks-ano::-webkit-scrollbar, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .art-chrono::-webkit-scrollbar, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .tracks-ano::-webkit-scrollbar {
+    width: 10px;
+    background-color: #2d2d2d;
+    border-radius: 1em;
+  }
+  .menu-chrono .chrono-section .contenedor-chrono .tit-art .art-chrono::-webkit-scrollbar-thumb, .menu-chrono .chrono-section .contenedor-chrono .tit-art .tracks-ano::-webkit-scrollbar-thumb, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .art-chrono::-webkit-scrollbar-thumb, .menu-chrono .chrono-section .contenedor-chrono .tit-hit .tracks-ano::-webkit-scrollbar-thumb {
+    background-color: #056166;
+    border-radius: 1em;
+  }
+}
+
+/*# sourceMappingURL=artists_styles.css.map */

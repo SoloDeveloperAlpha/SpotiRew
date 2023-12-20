@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta [name="theme-color"] content="#939396">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#939396">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/images/spotify-logo.png" type="image/png">
+    <link rel="preload" href="css/profile_styles.css" as="style">
+    <link rel="stylesheet" href="css/profile_styles.css">
+    <link rel="stylesheet" href="css/artists_styles.css">
+    <script src="https://kit.fontawesome.com/3725e89796.js" crossorigin="anonymous"></script>
+    <title>ChronoHITS - MostPlayed</title>
+</head>
+<body>
+    <div class="sidebar">
+        <a href="profile.html"><img src="assets/images/spotify-logo.png" alt="logo"></a>
+        <nav>
+            <ul>
+                <li>
+                <a href="profile.html" class="item-menu">
+                        <i class="fas fa-user"></i>
+                        <span>Perfil</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="artists.html" class="item-menu">
+                        <i class="fas fa-record-vinyl"></i>
+                        <span>Top Artist</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="recently.html" class="item-menu">
+                        <i class="fas fa-history"></i>
+                        <span>Recently</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="chronoHits.html" class="item-menu">
+                        <h2>CH</h2>
+                        <span>ChronoHits</span>
+                    </a>
+                </li>
+            </ul>
+            <i class="fab fa-github"></i>
+        </nav>
+    </div>
+    <main class="menu-played">
+        <div id="titulo-played">
+            <h1>Most Played</h1>
+        </div>
+        <div class="top-played-view">
+            <div id="played-vw">
+            </div>
+            <div id="album-vw">
+                <a href="#" id="vw-imagen" title="img-album">
+                </a>
+            </div>
+        </div>
+    </main>
+    <div class="container-load">
+        <div class="custom-loader"></div>
+    </div>
+    <script type="module" src="js/recent_ply.js"></script>
+</body>
+</html>

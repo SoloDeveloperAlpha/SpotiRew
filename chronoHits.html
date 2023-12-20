@@ -9,8 +9,10 @@
     <link rel="shortcut icon" href="assets/images/spotify-logo.png" type="image/png">
     <link rel="preload" href="css/profile_styles.css" as="style">
     <link rel="stylesheet" href="css/profile_styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="css/artists_styles.css">
     <script src="https://kit.fontawesome.com/3725e89796.js" crossorigin="anonymous"></script>
-    <title>ChronoHITS - Profile</title>
+    <title>ChronoHits</title>
 </head>
 <body>
     <div class="sidebar">
@@ -45,53 +47,37 @@
             <i class="fab fa-github"></i>
         </nav>
     </div>
-    <main class="menu">
-            <section class="menu-data-profile">
-                <div class="data-profile">
-                    <img src="" alt="foto-perfil" id="foto-perfil" loading="lazy">
-                    <h1 id="nombre"></h1>
-                    <div class="data-stats">
-                        <div id="data-stats-elem">
-                            <span class="stat-number" id="stat-followers"></span>
-                            <span id="stat-name">FOLLOWERS</span>
-                        </div>
-                        <div id="data-stats-elem">
-                            <span class="stat-number" id="stat-following"></span>
-                            <span id="stat-name">FOLLOWING</span>
-                        </div>
-                        <div id="data-stats-elem">
-                            <span class="stat-number" id="stat-playlist"></span>
-                            <span id="stat-name">PLAYLIST</span>
-                        </div>
-                    </div>
-                    <a id="log-out">LOG OUT</a>
-                </div>
-            </section>
-            <section class="menu-data-music">
-                <div class="data-music">
-                    <div class="column-data" id="topart">
-                        <div class="title-see">
-                            <h2>Top Artist</h2>
-                            <a href="artists.html">SEE MORE</a>
-                        </div>
-                        <div class="music-top">            
-                        </div>
-                    </div>
-                    <div class="column-data" id="mostply">
-                        <div class="title-see">
-                            <h2>Most Played</h2>
-                            <a href="mostPlayed.html">SEE MORE</a>
-                        </div>
-                        <div class="music-played">
-                        </div>
+    <main class="menu-chrono">
+        <div class="header-chrono">
+            <div class="shaper">
+                <h1>ChronoHits</h1>
+            </div>
+        </div>
+        <section class="chrono-section">
+            <div class="contenedor-chrono">
+                <div class="tit-art">
+                    <h2>Your Top Artist</h2>
+                    <div class="art-chrono">
+                    
                     </div>
                 </div>
-            </section>        
+
+                <div class="tit-hit">
+                    <h2>Best Hit<i class="fas fa-times" id="btn-exit"></i></h2>
+                    <div class="tracks-ano">
+                    
+                    </div>
+                </div>
+                
+            </div>
+        </section>
     </main>
     <div class="container-load">
         <div class="custom-loader"></div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="js/active-menu.js"></script>
-    <script type="module" src="js/access_profile.js"></script>
+    <script type="module" src="js/artists_data_info.js"></script>
 </body>
 </html>
+

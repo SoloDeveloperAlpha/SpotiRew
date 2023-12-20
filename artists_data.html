@@ -9,8 +9,10 @@
     <link rel="shortcut icon" href="assets/images/spotify-logo.png" type="image/png">
     <link rel="preload" href="css/profile_styles.css" as="style">
     <link rel="stylesheet" href="css/profile_styles.css">
+    <link rel="stylesheet" href="css/artists_styles.css">
     <script src="https://kit.fontawesome.com/3725e89796.js" crossorigin="anonymous"></script>
-    <title>ChronoHITS - Profile</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vibrant.js/1.0.0/Vibrant.js"></script>
+    <title>ChronoHITS - ArtistInfo</title>
 </head>
 <body>
     <div class="sidebar">
@@ -45,53 +47,53 @@
             <i class="fab fa-github"></i>
         </nav>
     </div>
-    <main class="menu">
-            <section class="menu-data-profile">
-                <div class="data-profile">
-                    <img src="" alt="foto-perfil" id="foto-perfil" loading="lazy">
-                    <h1 id="nombre"></h1>
-                    <div class="data-stats">
-                        <div id="data-stats-elem">
-                            <span class="stat-number" id="stat-followers"></span>
-                            <span id="stat-name">FOLLOWERS</span>
-                        </div>
-                        <div id="data-stats-elem">
-                            <span class="stat-number" id="stat-following"></span>
-                            <span id="stat-name">FOLLOWING</span>
-                        </div>
-                        <div id="data-stats-elem">
-                            <span class="stat-number" id="stat-playlist"></span>
-                            <span id="stat-name">PLAYLIST</span>
-                        </div>
-                    </div>
-                    <a id="log-out">LOG OUT</a>
+    <main class="menu-data-artist">
+        <div class="title-name">
+            <h2>Top Artists</h2>
+            <span id="name-artist"></span>
+        </div>
+        <div class="bubble-art">
+            <img src="" alt="" crossorigin="">
+        </div>
+        <div class="container-data-artist">
+            <div class="column-artist">
+                <div class="row-data1">
+                   <div id="item1">
+                    <h3></h3>
+                    <span>Followers</span>
+                   </div>
+                   <div id="item2">
+                     <h2></h2>
+                     <span id="rated"></span>
+                   </div>
                 </div>
-            </section>
-            <section class="menu-data-music">
-                <div class="data-music">
-                    <div class="column-data" id="topart">
-                        <div class="title-see">
-                            <h2>Top Artist</h2>
-                            <a href="artists.html">SEE MORE</a>
-                        </div>
-                        <div class="music-top">            
-                        </div>
-                    </div>
-                    <div class="column-data" id="mostply">
-                        <div class="title-see">
-                            <h2>Most Played</h2>
-                            <a href="mostPlayed.html">SEE MORE</a>
-                        </div>
-                        <div class="music-played">
-                        </div>
+                <div class="row-data2">
+                    <div id="item1">
+                        <h3></h3>
+                        <span>Genres</span>
                     </div>
                 </div>
-            </section>        
+                <div class="row-data3">
+                    <div class="disc-filtro">
+                        <h2>Discography</h2>
+                        <select name="fil" id="fil" title="Launch">
+                            <option value="all" selected>All</option>
+                            
+                        </select>
+                    </div>
+                    <div id="discografia">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="column-top">
+                <h4>More Top</h4>                
+            </div>
+        </div>
     </main>
     <div class="container-load">
         <div class="custom-loader"></div>
     </div>
-    <script src="js/active-menu.js"></script>
-    <script type="module" src="js/access_profile.js"></script>
+    <script type="module" src="js/artists_data_info.js"></script>
 </body>
 </html>

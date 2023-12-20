@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Trade+Winds&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Trade+Winds&display=swap');
 
 *{
     margin: 0;
@@ -14,14 +15,6 @@ body{
     width: 100vw;
     height: 100vh;
 }
-
-@font-face {
-    font-family: 'Gotham';
-    src: url('/Fonts/Gotham-Spotify-Font/GothamMedium.ttf') format('woff');
-    /* Agrega otras fuentes para diferentes formatos si lo deseas */
-    font-weight: normal;
-    font-style: normal;
-  }
 
 main{
     width: 100%;
@@ -59,16 +52,16 @@ main{
             height: auto;
            }
            >h1{
-            font-family: 'Gotham', sans-serif;
-            font-size: 30px;
+            font-family: 'Montserrat';
+            font-size: 2.25em;
             color: white;
             >span{
                 font-family: 'Trade Winds';
             }
            }
            >a{
-            font-family: 'Gotham', sans-serif;
-            font-size: 14px;
+            font-family: 'Montserrat';
+            font-size: 1em;
             padding: 10px 30px;
             border-radius: 50px;
             text-decoration: none;
